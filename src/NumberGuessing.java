@@ -14,16 +14,18 @@ public class NumberGuessing {
 
         while(guess!=number&&attempt!=0){
             if(guess>number){
-                System.out.println("Your guess is too high. Please ty again.");
+                System.out.println("Your guess is too high.");
 
             }
            else if(guess<number){
-                System.out.println("Your guess is too low. Please try again.");
+                System.out.println("Your guess is too low.");
 
             }
-            System.out.println("You have "+attempt+" attempt left");
-            guess = anthem.nextInt();
             attempt=attempt-1;
+            System.out.println("You have "+attempt+" attempts left");
+            if(attempt!=0){
+                guess = anthem.nextInt();
+            }
             }
 
 
